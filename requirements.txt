@@ -1,0 +1,5 @@
+Flask==2.0.2
+keras==2.8.0
+Pillow==9.0.1
+tensorflow==2.8.0
+
