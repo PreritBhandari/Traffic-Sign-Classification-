@@ -1,5 +1,4 @@
-# Traffic-Sign-Classification-
-Traffic Sign Classififcation using DevOps 
+# Traffic Sign Classififcation using DevOps 
 
 ## Steps:
 
