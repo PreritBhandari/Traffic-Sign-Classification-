@@ -8,5 +8,18 @@ Traffic Sign Classififcation using DevOps
 
    [Link to Files](https://www.kaggle.com/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign)
    
-4. 
+3. Go to the folder/directory of the project and execute the following commands:
+
+   a) Install virtualenv in the system and activate it firstly:
+   
+   ```
+   pip3 install virtualenv
+   
+   virtualenv venv
+   
+   source venv/bin/activate
+   
+   ```
+   
+   b) 
 
