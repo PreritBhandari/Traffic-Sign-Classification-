@@ -1,3 +1,14 @@
+# Train Test folders
+
+meta/
+Meta/
+test/
+Test/
+train/
+Train/
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
