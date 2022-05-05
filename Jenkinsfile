@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('SCM') {
-            steps {
-                git branch: 'master', url: 'https://github.com/PreritBhandari/Traffic-Sign-Classification-.git'
+        stage('Clone Repository'){
+            /* Cloning the repo to our work environment */
+            steps{
+                checkout scm
             }
         }
        
