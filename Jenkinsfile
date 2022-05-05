@@ -28,6 +28,7 @@ pipeline {
                 }
             }
         }
+        
         stage('Run Container on server1 and sever2') {
             steps {
                 script {
