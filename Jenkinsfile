@@ -7,18 +7,16 @@ pipeline {
                 git branch: 'master', url: 'https://github.com/PreritBhandari/Traffic-Sign-Classification-.git'
             }
         }
-       e
+       
         stage('Build Docker Image') {
             steps {
                 script {
 
-                 sh 'docker build -t tscwithdevops:1 .'
+                 sh 'docker build -t tscwithdevops:v1 .'
 
                 }
             }
         }
-
-
 
         stage('Push Docker Image in dockerhub') {
             steps {
@@ -28,17 +26,15 @@ pipeline {
                         sh "docker login -u preritbhandari -p ${dockerhp}"
 
                     }
-                            sh 'docker push preritbhandari/tscwithdevops:1'
+                            sh 'docker push preritbhandari/tscwithdevops:v1'
               }
             }
           }
         stage('Run Container on server1 and sever2'){
             steps {
                 script {
-                sh 'docker run -p 9900:4000 -d preritbhandari/tscwithdevops:1'
+                sh 'docker run -p 9900:4000 -d preritbhandari/tscwithdevops:v1'
                 }
-
-
             }
 
         }
