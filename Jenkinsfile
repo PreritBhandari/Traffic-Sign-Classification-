@@ -12,7 +12,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'sudo docker build -t tscwithdevops:v1 .'
+                    sh 'sudo docker build -t preritbhandari/tscwithdevops:v1 .'
                 }
             }
         }
