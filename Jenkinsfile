@@ -29,7 +29,7 @@ pipeline {
             }
         }
 
-        stage('Run Container on server1 and sever2') {
+        stage('Run Container on server') {
             steps {
                 script {
                     sh 'sudo docker run -p 5000:4000 -d preritbhandari/tscwithdevops:v1'
