@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
 
-                 sh 'docker build -t tscwithdevops:v1 .'
+                 sh 'sudo docker build -t tscwithdevops:v1 .'
 
                 }
             }
@@ -23,17 +23,17 @@ pipeline {
                 script {
 
                     withCredentials([string(credentialsId: 'dockerhup', variable: 'dockerhp')]) {
-                        sh "docker login -u preritbhandari -p ${dockerhp}"
+                        sh "sudo docker login -u preritbhandari -p ${dockerhp}"
 
                     }
-                            sh 'docker push preritbhandari/tscwithdevops:v1'
+                         sh 'sudo docker push preritbhandari/tscwithdevops:v1'
               }
             }
           }
         stage('Run Container on server1 and sever2'){
             steps {
                 script {
-                sh 'docker run -p 9900:4000 -d preritbhandari/tscwithdevops:v1'
+                sh 'sudo docker run -p 9900:4000 -d preritbhandari/tscwithdevops:v1'
                 }
             }
 
