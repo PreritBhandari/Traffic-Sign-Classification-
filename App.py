@@ -6,7 +6,6 @@ import numpy as np
 from PIL import Image
 
 app = Flask(__name__)
-app.run(host="0.0.0.0")
 
 # Classes of trafic signs
 classes = { 0:'Speed limit (20km/h)',
@@ -85,4 +84,4 @@ def upload():
     return None
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')    
