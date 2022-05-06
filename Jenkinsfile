@@ -32,7 +32,7 @@ pipeline {
         stage('Run Container on server') {
             steps {
                 script {
-                    sh 'sudo docker run -p 5000:4000 -d preritbhandari/tscwithdevops:v1'
+                    sh 'sudo docker run -p 5000:80 -d preritbhandari/tscwithdevops:v1'
                 }
             }
         }
