@@ -17,7 +17,6 @@ pipeline {
             }
         }
 
-
         stage('Push Docker Image in dockerhub') {
             steps {
                 script {
