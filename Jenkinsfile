@@ -12,7 +12,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'sudo DOCKER_BUILDKIT=1 docker build -t preritbhandari/tscwithdevops:v1 .'
+                    sh 'sudo docker build -t preritbhandari/tscwithdevops:v1 .'
                 }
             }
         }
@@ -28,7 +28,6 @@ pipeline {
                 }
             }
         }
-
 
         stage('Run Container on server') {
             steps {
