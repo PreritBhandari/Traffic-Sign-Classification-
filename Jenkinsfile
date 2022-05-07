@@ -28,6 +28,7 @@ pipeline {
                 }
             }
         }
+        
 
         stage('Run Container on server') {
             steps {
